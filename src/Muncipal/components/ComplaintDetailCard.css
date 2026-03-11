@@ -1,0 +1,103 @@
+.cdc-card {
+  background: #fff;
+  border: 1.5px solid #e8eaf0;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  outline: none;
+}
+
+.cdc-card:hover {
+  border-color: var(--color-saffron);
+  box-shadow: 0 4px 16px rgba(255, 111, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.cdc-card:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.cdc-card--selected {
+  border-color: var(--color-saffron);
+  background: #fff8f0;
+  box-shadow: 0 4px 20px rgba(255, 111, 0, 0.15);
+}
+
+.cdc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.cdc-id {
+  font-size: 0.7rem;
+  color: var(--color-blue);
+  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.cdc-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cdc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cdc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.cdc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cdc-priority {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cdc-priority--high {
+  background: #fff0f0;
+  color: #c0392b;
+}
+
+.cdc-priority--medium {
+  background: #fff8e1;
+  color: #e65100;
+}
+
+.cdc-priority--low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.cdc-dept {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}

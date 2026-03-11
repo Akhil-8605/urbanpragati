@@ -1,0 +1,142 @@
+.fb-rating-overview {
+  display: flex;
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fb-avg-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 140px;
+  padding-right: 1.5rem;
+  border-right: 1px solid #e8eaf0;
+}
+.fb-avg-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-saffron);
+  line-height: 1;
+}
+.fb-avg-label {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.fb-avg-total {
+  font-size: 0.72rem;
+  color: #bbb;
+}
+.fb-bar-section {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fb-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+}
+.fb-bar-label {
+  width: 40px;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  text-align: right;
+}
+.fb-bar-track {
+  flex: 1;
+  height: 8px;
+  background: #f0f0f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fb-bar-fill {
+  height: 100%;
+  background: var(--color-saffron);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.fb-bar-count {
+  width: 20px;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+.star-rating { display: inline-flex; gap: 2px; }
+.star { color: #ddd; font-size: 1rem; }
+.star--filled { color: #f59e0b; }
+.fb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.fb-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.fb-item:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.fb-item-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.fb-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-saffron), #ff9800);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fb-citizen {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin: 0;
+}
+.fb-meta {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+.fb-item-rating {
+  margin-left: auto;
+}
+.fb-comment {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+.fb-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}

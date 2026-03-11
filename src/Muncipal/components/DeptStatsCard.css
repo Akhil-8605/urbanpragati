@@ -1,0 +1,103 @@
+@import '../../design-tokens.css';
+
+.dept-stats-card {
+  padding: var(--space-5);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border-top: 3px solid var(--dept-color, var(--color-primary));
+}
+.dept-stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.dsc-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.dsc-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--dept-color, #FF6F00) 12%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--dept-color, var(--color-primary));
+}
+.dsc-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 2px;
+}
+.dsc-total {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.dsc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.dsc-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+.dsc-stat.pending { background: rgba(245, 158, 11, 0.08); }
+.dsc-stat.in-progress { background: rgba(11, 95, 255, 0.08); }
+.dsc-stat.resolved { background: rgba(0, 100, 0, 0.08); }
+
+.dsc-stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.dsc-stat.pending .dsc-stat-num { color: var(--color-warning); }
+.dsc-stat.in-progress .dsc-stat-num { color: var(--color-accent); }
+.dsc-stat.resolved .dsc-stat-num { color: var(--color-success); }
+
+.dsc-stat-label {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dsc-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.dsc-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.dsc-progress-fill {
+  height: 100%;
+  background: var(--dept-color, var(--color-secondary));
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+.dsc-progress-pct {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}

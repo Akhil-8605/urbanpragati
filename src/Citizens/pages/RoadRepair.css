@@ -1,0 +1,58 @@
+@import '../../design-tokens.css';
+
+.road-page { min-height: 100vh; background: var(--color-bg); display: flex; flex-direction: column; }
+.road-main { flex: 1; max-width: var(--container-max); margin: 0 auto; padding: var(--space-6) var(--space-4); width: 100%; }
+
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--color-primary-dark); }
+.breadcrumb-sep { color: var(--color-border); }
+
+.service-page-header {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-6); border-radius: var(--radius-lg); margin-bottom: var(--space-6);
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+  border-left: 5px solid var(--color-primary);
+}
+.service-header-icon svg { width: 64px; height: 64px; }
+.service-header-text h1 { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; color: var(--color-text-dark); margin-bottom: var(--space-1); }
+.service-header-text p { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+.service-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); align-items: start; }
+.service-info-card { padding: var(--space-6); margin-bottom: var(--space-5); }
+.service-info-card h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-text-dark); margin-bottom: var(--space-2); }
+.service-info-card p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-5); line-height: 1.6; }
+
+.service-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.form-group { display: flex; flex-direction: column; gap: var(--space-1); }
+.form-group label { font-size: 0.85rem; font-weight: 600; color: var(--color-text-dark); }
+.form-group input, .form-group select, .form-group textarea {
+  padding: var(--space-3); border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  font-family: var(--font-body); font-size: 0.9rem; color: var(--color-text-dark);
+  background: var(--color-surface); transition: border-color var(--transition-fast), box-shadow var(--transition-fast); outline: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.12);
+}
+.form-group textarea { resize: vertical; }
+.file-input { padding: var(--space-2); cursor: pointer; }
+.btn-full { width: 100%; justify-content: center; }
+
+.service-mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.mini-stat-card {
+  background: var(--color-surface); border-radius: var(--radius-md); padding: var(--space-4);
+  text-align: center; border: 1px solid var(--color-border); display: flex; flex-direction: column;
+  gap: var(--space-1); transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.mini-stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.road-num { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); }
+.mini-stat-label { font-size: 0.75rem; color: var(--color-text-muted); font-weight: 500; }
+
+.service-right-col { display: flex; flex-direction: column; gap: var(--space-5); }
+.complaint-list { display: flex; flex-direction: column; gap: var(--space-3); }
+.map-section { margin-top: var(--space-2); }
+.section-heading { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--color-text-dark); margin-bottom: var(--space-4); }
+.section-heading.sm { font-size: 0.95rem; margin-bottom: var(--space-3); }
+
+@media (max-width: 900px) { .service-two-col { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .service-page-header { flex-direction: column; text-align: center; } .service-mini-stats { grid-template-columns: 1fr 1fr; } }

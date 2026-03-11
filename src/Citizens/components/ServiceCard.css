@@ -1,0 +1,88 @@
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6) !important;
+  position: relative;
+  overflow: hidden;
+}
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--svc-color, var(--color-saffron));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.svc-card:hover::before {
+  opacity: 1;
+}
+.svc-card__icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--svc-color, var(--color-saffron)) 12%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+.svc-card:hover .svc-card__icon-wrap {
+  transform: scale(1.08);
+}
+.svc-card__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.svc-card__body {
+  flex: 1;
+}
+.svc-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+.svc-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+.svc-card__stats {
+  display: flex;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-gray-100);
+}
+.svc-card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.svc-card__stat-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+.svc-card__stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+.svc-card__cta {
+  width: fit-content;
+  font-size: var(--text-xs) !important;
+  color: var(--svc-color, var(--color-saffron)) !important;
+  border-color: var(--svc-color, var(--color-saffron)) !important;
+}
+.svc-card__cta:hover {
+  background: var(--svc-color, var(--color-saffron)) !important;
+  color: white !important;
+}

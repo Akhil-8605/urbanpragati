@@ -1,0 +1,431 @@
+.cdash-gamified-page {
+    min-height: 100vh;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.cdash-main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* HERO SECTION */
+.cdash-hero-gamify {
+    position: relative;
+    padding: 3rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.cdash-hero-gamify::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(79, 70, 229, 0.15) 0%, transparent 50%);
+    animation: rotateBg 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.cdash-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.cdash-welcome h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.cdash-highlight {
+    background: linear-gradient(to right, #4F46E5, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cdash-welcome p {
+    font-size: 1.1rem;
+    color: #64748B;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* GAMIFICATION LEVEL CARD */
+.cdash-level-card {
+    background: #FFFFFF;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    padding: 2rem;
+    border-radius: 20px;
+    min-width: 320px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cdash-level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+}
+
+.cdash-level-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.cdash-points-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cdash-points-number {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.cdash-points-label {
+    font-size: 1.1rem;
+    color: #64748B;
+    font-weight: 500;
+}
+
+.cdash-progress-container {
+    width: 100%;
+}
+
+.cdash-progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748B;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cdash-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(15, 23, 42, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.cdash-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    box-shadow: 0 0 10px currentColor;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* GRID LAYOUT FOR CHARTS & NOTIFS */
+.cdash-grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* GLASS PANELS */
+.cdash-glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 24px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cdash-glass-panel:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.cdash-panel-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cdash-panel-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: #000000;
+}
+
+.cdash-panel-subtitle {
+    font-size: 0.9rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.cdash-chart-container {
+    flex: 1;
+    min-height: 300px;
+    width: 100%;
+}
+
+.cdash-chart-small {
+    min-height: 220px;
+}
+
+.cdash-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* NOTIFICATIONS & RIGHT COL */
+.cdash-right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.cdash-notifications-panel {
+    flex: 1;
+}
+
+.cdash-pulse-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #EF4444;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+.cdash-notifs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: 550px;
+    padding-right: 0.5rem;
+}
+
+.cdash-notifs-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cdash-notifs-list::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.04);
+}
+
+.cdash-notifs-list::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.08);
+    border-radius: 10px;
+}
+
+.cdash-notif-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.25rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 16px;
+    gap: 1rem;
+    animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+.cdash-notif-card:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cdash-notif-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cdash-notif-body {
+    flex: 1;
+}
+
+.cdash-notif-body h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: #0F172A;
+}
+
+.cdash-notif-body p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #64748B;
+    line-height: 1.4;
+}
+
+.cdash-notif-time {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.cdash-notif-loading,
+.cdash-empty-state {
+    color: #6B7280;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.95rem;
+}
+
+.cdash-empty-state {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.03);
+    border: 1px dashed rgba(15, 23, 42, 0.1);
+}
+
+/* SERVICES SECTION */
+.cdash-services-section {
+    padding-top: 1rem;
+}
+
+.cdash-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cdash-section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #0F172A;
+}
+
+.cdash-section-header p {
+    color: #64748B;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cdash-accent-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #4F46E5, #06B6D4);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.cdash-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .cdash-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cdash-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cdash-level-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cdash-main-content {
+        padding: 1rem;
+    }
+
+    .cdash-hero-gamify {
+        padding: 2rem;
+    }
+
+    .cdash-welcome h1 {
+        font-size: 2rem;
+    }
+}
