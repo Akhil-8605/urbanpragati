@@ -6,7 +6,7 @@ import './AdminDashboard.css';
 import AdminSidebar from '../components/AdminSidebar';
 import AdminNavbar from '../components/AdminNavbar';
 import DeptStatsCard from '../components/DeptStatsCard';
-import { getAllComplaints, assignComplaintToWorker, approveComplaint, getComplaintsByDepartment } from '../../firebaseOperations/db';
+import { getAllComplaints, assignComplaintToWorker, approveComplaint } from '../../firebaseOperations/db';
 const statusClass = {
   Pending: 'chip-pending',
   'In Progress': 'chip-inprogress',
@@ -122,7 +122,7 @@ export default function AdminDashboard() {
         <main className="admin-content">
           <div className="admin-page-header">
             <div>
-              <h1 className="admin-page-title">Urban Pragati — Central Admin Dashboard</h1>
+              <h1 className="admin-page-title">Urban Pragati — Central Admin Dashboard {adminDepartment? adminDepartment : ''}</h1>
               <p className="admin-page-sub">System-wide overview of all departments and complaints</p>
             </div>
           </div>

@@ -7,11 +7,8 @@ export default function PropertyTaxDept() {
   const [selected, setSelected] = useState(0);
   const [complaintsList, setComplaintsList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
 
   const navigate = require('react-router-dom').useNavigate();
-
-  const fetchData = () => {};   
 
   useEffect(() => {
     let unsub = () => {};
@@ -45,7 +42,6 @@ export default function PropertyTaxDept() {
         });
       } catch (err) {
         console.error(err);
-        setError('Could not load data.');
         setLoading(false);
       }
     };

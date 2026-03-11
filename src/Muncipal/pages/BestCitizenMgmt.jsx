@@ -6,7 +6,6 @@ const badgeClass = { Platinum: 'badge-platinum', Gold: 'badge-gold', Silver: 'ba
 export default function BestCitizenMgmt() {
   const [citizensList, setCitizensList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const navigate = require('react-router-dom').useNavigate();
 
   useEffect(() => {
@@ -34,7 +33,6 @@ export default function BestCitizenMgmt() {
       setCitizensList(mapped);
     } catch (err) {
       console.error(err);
-      setError('Could not load citizens leaderboard.');
     } finally {
       setLoading(false);
     }

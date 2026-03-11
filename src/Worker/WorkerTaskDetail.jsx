@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ImageKit from 'imagekit-javascript';
 import { resolveComplaintWithProof } from '../firebaseOperations/db';

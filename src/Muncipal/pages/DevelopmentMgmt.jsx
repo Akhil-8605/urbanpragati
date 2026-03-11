@@ -7,7 +7,6 @@ export default function DevelopmentMgmt() {
   const [proposalsList, setProposalsList] = useState([]);
   const [stats, setStats] = useState({ total: 0, approved: 0, active: 0, votes: 0 });
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const navigate = require('react-router-dom').useNavigate();
 
   useEffect(() => {

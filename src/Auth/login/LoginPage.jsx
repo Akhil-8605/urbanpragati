@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser, getAdminDepartmentFromEmail } from '../../firebaseOperations/auth';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../../firebase';
 import './LoginPage.css';
 import Modi from '../modi.webp';
 

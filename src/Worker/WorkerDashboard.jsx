@@ -12,7 +12,6 @@ export default function WorkerDashboard() {
   const [activeModal, setActiveModal] = useState(null);
   const [selectedTask, setSelectedTask] = useState(null);
   const [newStatus, setNewStatus] = useState('');
-  const [proofFile, setProofFile] = useState(null);
   const [quotationForm, setQuotationForm] = useState({
     estimatedCost: '',
     description: '',
@@ -62,7 +61,6 @@ export default function WorkerDashboard() {
       await updateComplaintStatusWithNotification(selectedTask._id, newStatus, selectedTask.userId, message);
       alert('Status updated successfully!');
       setActiveModal(null);
-      setProofFile(null);
       setNewStatus('');
     } catch (err) {
       alert('Error updating status');
@@ -207,7 +205,7 @@ export default function WorkerDashboard() {
               </div>
               <div className="form-group">
                 <label className="form-label">Proof of Work (Optional)</label>
-                <input type="file" className="form-input" accept="image/*" onChange={e => setProofFile(e.target.files[0])} />
+                <input type="file" className="form-input" accept="image/*" onChange={()=>{}} />
                 <span className="field-hint">Upload a photo if task is resolved.</span>
               </div>
               <div className="worker-modal-actions">

@@ -8,7 +8,6 @@ export default function WaterDept() {
   const [selected, setSelected] = useState(0);
   const [complaintsList, setComplaintsList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [workersList, setWorkersList] = useState([]);
   const [selectedWorkerId, setSelectedWorkerId] = useState('');
   const [showRazorpay, setShowRazorpay] = useState(false);
@@ -53,7 +52,6 @@ export default function WaterDept() {
         });
       } catch (err) {
         console.error(err);
-        setError('Could not load data.');
         setLoading(false);
       }
     };

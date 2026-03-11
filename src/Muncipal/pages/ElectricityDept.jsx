@@ -10,7 +10,6 @@ export default function ElectricityDept() {
   const [loading, setLoading] = useState(true);
   const [workersList, setWorkersList] = useState([]);
   const [selectedWorkerId, setSelectedWorkerId] = useState('');
-  const [error, setError] = useState(null);
   const [showRazorpay, setShowRazorpay] = useState(false);
   const [payingRecord, setPayingRecord] = useState(null);
   const [rzpStep, setRzpStep] = useState('confirm');
@@ -56,7 +55,6 @@ export default function ElectricityDept() {
         });
       } catch (err) {
         console.error(err);
-        setError('Could not load data.');
         setLoading(false);
       }
     };

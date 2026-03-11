@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import './ServiceCard.css';
 
 function ServiceCard({ icon, title, description, to, color, stats }) {

@@ -11,10 +11,6 @@ import {
     setDoc,
     serverTimestamp,
     updateDoc,
-    query,
-    collection,
-    where,
-    getDocs,
 } from 'firebase/firestore';
 
 // ─── REGISTER ───────────────────────────────────────────────────────────────

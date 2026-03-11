@@ -6,7 +6,6 @@ import {
 import CitizenNavbar from '../components/CitizenNavbar';
 import CitizenFooter from '../components/CitizenFooter';
 import ServiceCard from '../components/ServiceCard';
-import LeaderboardCard from '../components/LeaderboardCard';
 import { listenComplaintsByUser, getTopCitizens } from '../../firebaseOperations/db';
 import { getUserProfile } from '../../firebaseOperations/auth';
 import './CitizenDashboard.css';

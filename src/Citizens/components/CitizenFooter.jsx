@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './CitizenFooter.css';
 import Modi from "../../Auth/modi.webp";

@@ -1,1 +1,16 @@
-import { initializeApp } from "firebase/app";import { getAnalytics } from "firebase/analytics";import { getAuth } from "firebase/auth";import { getFirestore } from "firebase/firestore";const firebaseConfig = {    apiKey: "AIzaSyBPur4N9VGmSdccQ-W6lZkakgQcupj__f4",    authDomain: "urbanpragati.firebaseapp.com",    projectId: "urbanpragati",    storageBucket: "urbanpragati.firebasestorage.app",    messagingSenderId: "550998147950",    appId: "1:550998147950:web:b55b24dc7fd4c7f539f77f",    measurementId: "G-KPVKQ26M1X"};const app = initializeApp(firebaseConfig);const analytics = getAnalytics(app);export const auth = getAuth(app);export const db = getFirestore(app);
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+const firebaseConfig = {
+    apiKey: "AIzaSyBPur4N9VGmSdccQ-W6lZkakgQcupj__f4",
+    authDomain: "urbanpragati.firebaseapp.com",
+    projectId: "urbanpragati",
+    storageBucket: "urbanpragati.firebasestorage.app",
+    messagingSenderId: "550998147950",
+    appId: "1:550998147950:web:b55b24dc7fd4c7f539f77f",
+    measurementId: "G-KPVKQ26M1X"
+};
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);

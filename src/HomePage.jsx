@@ -4,7 +4,6 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import CitizenNavbar from './Citizens/components/CitizenNavbar';
 import CitizenFooter from './Citizens/components/CitizenFooter';
-import ServiceCard from './Citizens/components/ServiceCard';
 import ComplaintCard from './Citizens/components/ComplaintCard';
 import LeaderboardCard from './Citizens/components/LeaderboardCard';
 import { getAllComplaints, getTopCitizens, getAllFeedbacks } from './firebaseOperations/db';

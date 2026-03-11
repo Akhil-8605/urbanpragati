@@ -17,7 +17,6 @@ export default function FeedbackMgmt() {
   const [stats, setStats] = useState({ averageRating: 0, totalFeedbacks: 0 });
   const [ratingCounts, setRatingCounts] = useState({ 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 });
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const navigate = require('react-router-dom').useNavigate();
 
   useEffect(() => {
@@ -60,7 +59,6 @@ export default function FeedbackMgmt() {
       setFeedbacksList(mappedFeedbacks);
     } catch (err) {
       console.error(err);
-      setError('Could not load feedbacks.');
     } finally {
       setLoading(false);
     }
